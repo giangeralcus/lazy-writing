@@ -1,6 +1,6 @@
 # Banned Words and Patterns: English
 
-Compiled from CMU/ACL 2025 (Russell et al.), Wikipedia WP:AIVOCAB, Buffer's 52M-post analysis, Kobak et al. (Science Advances 2025), Orwell, and antislop R-15/R-16. Full links in sources.md. One banned word is a typo; a swarm is a confession.
+Compiled from Russell et al. (ACL 2025), Wikipedia WP:AIVOCAB, Buffer's 52M-post analysis, Kobak et al. (Science Advances 2025), Orwell, and antislop R-15/R-16. Full links in sources.md. One banned word may be chance; several in one text mean rewrite it.
 
 <!-- cek-teks: off -->
 ## Vocabulary (never as filler)

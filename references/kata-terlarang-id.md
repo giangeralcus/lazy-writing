@@ -1,15 +1,15 @@
 # Kata dan Frasa Terlarang: Indonesia
 
 <!-- cek-teks: off -->
-Kompilasi dari repo anti-slop Indonesia di GitHub, riset akademik, dan antislop-copywriting (sumber lengkap di sources.md). Penanda yang paling sering disebut penutur asli: **"hiruk pikuk"**, sampai ada yang bilang "kalau ada hiruk pikuk, pasti ChatGPT".
+Kompilasi dari repo anti-slop Indonesia di GitHub, riset akademik, dan antislop-copywriting (sumber lengkap di sources.md). Penanda yang paling sering disebut penutur asli: "hiruk-pikuk" (juga ditulis "hiruk pikuk"), sampai ada yang bilang "kalau ada hiruk pikuk, pasti ChatGPT".
 
-Cara pakai: pindai draf. Setiap temuan berarti **tulis ulang kalimatnya**, bukan cuma hapus frasanya. Frasa klise biasanya menempel di kalimat yang memang kosong; kalau frasanya saja yang dihapus, kalimatnya tetap kosong.
+Cara pakai: pindai draf. Setiap temuan berarti tulis ulang kalimatnya, bukan cuma hapus frasanya. Frasa klise biasanya menempel di kalimat yang memang kosong; kalau frasanya saja yang dihapus, kalimatnya tetap kosong.
 
 ## 1. Pembuka klise (hapus, mulai dari fakta, angka, atau adegan)
 
 - "Di era digital yang serba cepat ini, …" / "Di era yang serba modern ini, …" / "Di zaman sekarang ini, …"
 - "Seiring dengan perkembangan teknologi (yang semakin pesat), …" / "Seiring berjalannya waktu, …"
-- "Dalam dunia X yang terus berkembang, …" / "Di tengah hiruk pikuk …" (hiruk pikuk terlarang total)
+- "Dalam dunia X yang terus berkembang, …" / "Di tengah hiruk-pikuk …" (hiruk-pikuk terlarang total)
 - "Tidak dapat dipungkiri bahwa …" / "Tak bisa dimungkiri, …": nyatakan langsung
 - "Seperti yang kita ketahui (bersama), …": kalau semua sudah tahu, tidak perlu ditulis
 - "Penting untuk dipahami/dicatat/diketahui bahwa …": langsung isinya
@@ -25,7 +25,7 @@ Cara pakai: pindai draf. Setiap temuan berarti **tulis ulang kalimatnya**, bukan
 - "Pada intinya, …" / "Yang sebenarnya penting adalah …" / "Inti permasalahannya adalah …": nyatakan poinnya
 - "Para ahli mengatakan …" / "Banyak orang percaya …" / "Menurut pengamat industri …" tanpa nama: sebut sumbernya atau hapus
 
-## 3. Transisi klise (maksimal sekali per teks, jangan membuka dua paragraf berturut-turut)
+## 3. Transisi klise (masing-masing paling banyak sekali per teks, dan tidak membuka dua paragraf berturut-turut)
 
 - "Selain itu," / "Tidak hanya itu," / "Terlebih lagi," / "Lebih lanjut," / "Tak kalah penting,"
 - "Namun demikian,": cukup "Namun," atau "Tapi,"
@@ -60,9 +60,9 @@ Pola AI paling gampang dikenali: kalimat sudah selesai, lalu diberi ekor analiti
 
 ## 7. Cringe dan over-gaul (dari humanizer-id)
 
-- Slang lebih dari 2 per paragraf: kurangi. Slang itu bumbu, bukan makanan.
+- Slang lebih dari 2 per paragraf: kurangi.
 - "bro/cuy/anjay/wkwk" di setiap kalimat: noise.
-- Campur register: "gue/lo" dengan "aku/kamu" dalam satu teks. Pilih satu, konsisten.
+- Campur register dalam satu teks, misalnya "gw/lu" dengan "aku/kamu" atau "saya/Anda". Pilih satu, konsisten (LW-27).
 - Buzzword Inggris di teks Indonesia: slay, literally game-changer, seamless, groundbreaking, testament, leverage, robust.
 - Bahasa gaul generasi alpha di konten dewasa: skibidi, sigma, ohio, gyatt, mewing.
 - Uji baca keras-keras: kalau terasa seperti "brand pura-pura gen-Z" atau "robot formal", tulis ulang.
@@ -70,7 +70,8 @@ Pola AI paling gampang dikenali: kalimat sudah selesai, lalu diberi ekor analiti
 
 ## 8. Ejaan dan ragam yang sering salah (dari bahasa-skills, EYD V)
 
+- "dimana" selalu salah eja; tulis "di mana".
 - "di mana" sebagai penghubung ("kasus di mana …"): pakai "yang" atau pecah kalimatnya.
-- "dimana", "dikarenakan", dan "dengan demikian" berturut-turut: variasikan atau potong.
+- "dikarenakan" tidak baku; tulis "karena".
 - "yang mana": ulangi kata bendanya. "revisi kedua; revisi ini …"
 - Kata tidak baku di teks formal ("kayak", "gini", "udah", "banget"): simpan untuk chat santai saja.

@@ -2,7 +2,7 @@
 
 Pola struktur dan nada yang membuat teks gampang dikenali sebagai tulisan AI, dengan contoh Indonesia dan English. Sebagian besar diambil dari antislop-copywriting (miqdadbadjuber/anti-slop) dan Wikipedia *Signs of AI writing*; padanan Indonesia dari repo anti-slop Indonesia di [sources.md](sources.md).
 
-Setiap pola: ciri, kenapa terbaca AI, contoh sebelum dan sesudah. Yang dicari selalu **gerombolan**, bukan satu tanda (lihat "Jangan ditandai" di bawah).
+Setiap pola: ciri, kenapa terbaca AI, contoh sebelum dan sesudah. Yang dicari selalu gerombolan, bukan satu tanda (lihat "Jangan ditandai" di bawah).
 
 <!-- cek-teks: off -->
 ## Struktur kalimat
@@ -52,7 +52,7 @@ Setiap pola: ciri, kenapa terbaca AI, contoh sebelum dan sesudah. Yang dicari se
 
 ### Sinonim diputar-putar (LW-24)
 
-- Ciri: satu benda diberi nama berbeda di setiap kalimat untuk menghindari pengulangan. "branch ... cabang ... jalur kerja ... versi draft".
+- Ciri: satu benda diberi nama berbeda di setiap kalimat untuk menghindari pengulangan. "branch ... cabang ... jalur kerja ... versi draf".
 - Kenapa buruk: pembaca yang sedang belajar mengira itu empat benda berbeda.
 - Sesudah: pakai satu nama yang paling jelas, ulangi kalau perlu.
 
@@ -60,7 +60,7 @@ Setiap pola: ciri, kenapa terbaca AI, contoh sebelum dan sesudah. Yang dicari se
 
 - Ciri: pasif tanpa pelaku. "Keputusan telah diambil untuk ...", "Halaman harga telah diperbarui", "Dilakukan pengecekan".
 - Sesudah: "Gian memutuskan ...", "Gw memperbarui halaman harga".
-- Boleh: pelakunya tidak diketahui atau memang bukan inti ("server direstart jam 03.00").
+- Boleh: pelakunya tidak diketahui atau memang bukan inti ("server di-restart jam 03.00").
 
 ### Benda mati yang berpikir (LW-22)
 
@@ -92,7 +92,7 @@ Setiap pola: ciri, kenapa terbaca AI, contoh sebelum dan sesudah. Yang dicari se
 
 ### Pengumuman (signposting)
 
-- Ciri: "Mari kita bahas", "Berikut yang perlu lu tahu", "Let's dive in", "Artikel ini akan membahas".
+- Ciri: "Mari kita bahas", "Berikut yang perlu lu tahu", "Ada tiga istilah di baliknya:", "Let's dive in", "Artikel ini akan membahas".
 - Sesudah: langsung bahas. Pembuka adalah jawabannya (LW-01).
 
 ### Nada otoritas palsu
@@ -114,13 +114,13 @@ Setiap pola: ciri, kenapa terbaca AI, contoh sebelum dan sesudah. Yang dicari se
 
 ### Em dash (LW-05)
 
-- Ciri: karakter em dash (U+2014) sebagai sisipan atau penyambung, juga dua tanda hubung berspasi yang dipakai dengan cara sama.
+- Ciri: karakter em dash (U+2014) sebagai sisipan atau penyambung, juga en dash berspasi (U+2013) dan dua tanda hubung berspasi yang dipakai dengan cara sama.
 - Ganti, kira-kira berurutan: titik (kalimat baru), koma (sisipan pendek), titik dua (penjelasan), kurung (sisipan sungguhan), atau susun ulang kalimatnya.
 - Catatan: banyak editor manusia memakai em dash. Di teks orang lain, em dash sendirian bukan bukti AI. Di teks yang agent tulis, LW-05 tetap berlaku penuh.
 
 ### Bold di mana-mana (LW-14)
 
-- Ciri: setiap istilah penting dibold. Penekanan di mana-mana sama dengan tidak ada penekanan.
+- Ciri: setiap istilah penting dibold, atau kalimat bold yang mengulang kalimat pembuka. Penekanan di mana-mana sama dengan tidak ada penekanan.
 
 ### Tanda kutip berlebihan
 
@@ -131,6 +131,7 @@ Setiap pola: ciri, kenapa terbaca AI, contoh sebelum dan sesudah. Yang dicari se
 
 - Ciri: "- **Performa:** Waktu muat lebih cepat." Labelnya mengulang isi item.
 - Sesudah: satu kalimat, atau bullet tanpa label.
+- Boleh: label yang membawa informasi dan tidak bisa ditebak dari isinya, misalnya "Bukti:", "Belum dicek:", "Yang perlu lu lakukan:" di laporan. Label nomor aturan ("LW-05 Tanpa em dash.") di daftar aturan juga boleh, karena fungsinya jangkar rujukan.
 
 ### Huruf kapital untuk teriak
 
@@ -144,11 +145,11 @@ Setiap pola: ciri, kenapa terbaca AI, contoh sebelum dan sesudah. Yang dicari se
 <!-- cek-teks: on -->
 ## Jangan ditandai
 
-Penulis manusia bisa kena beberapa pola di atas tanpa bantuan AI. Sebelum mengubah teks orang lain, pastikan yang ditandai benar-benar gerombolan. Hal berikut **bukan** bukti AI kalau berdiri sendiri:
+Penulis manusia bisa kena beberapa pola di atas tanpa bantuan AI. Sebelum mengubah teks orang lain, pastikan yang ditandai benar-benar gerombolan. Hal berikut bukan bukti AI kalau berdiri sendiri:
 
 - Tata bahasa rapi dan gaya konsisten.
-- Campuran register santai dan formal; ini sering tanda manusia.
-- Teks yang kering tanpa tanda-tanda khusus AI. Kering belum tentu AI.
+- Campuran register santai dan formal. Kalau mengganggu pembaca, itu masalah konsistensi (LW-27), bukan bukti AI.
+- Teks yang lugas tanpa tanda-tanda khusus AI. Lugas belum tentu AI.
 - Kosakata formal yang tepat. AI berlebihan memakai kata tertentu, bukan semua kata formal.
 - Satu kata transisi ("namun", "selain itu"). Baru jadi tanda kalau menumpuk.
 - Satu em dash, atau tanda kutip melengkung (banyak aplikasi mengubahnya otomatis).
@@ -166,4 +167,4 @@ Kalau ketemu ini, condong untuk membiarkan teksnya:
 - Panjang kalimat yang bervariasi.
 - Sisipan dan koreksi diri yang tulus.
 
-Kalau pemilik memberi contoh tulisannya sendiri, cocokkan dengan contoh itu sebelum menulis ulang: panjang kalimat, kosakata, tanda baca, kebiasaan. Contoh tulisan pemilik mengalahkan aturan gaya di skill ini, kecuali aturan Gerbang Mutlak; tabrakan dengan Gerbang Mutlak ditanyakan lewat LW-08.
+Kalau pemilik memberi contoh tulisannya sendiri, cocokkan dengan contoh itu sebelum menulis ulang: panjang kalimat, kosakata, tanda baca, kebiasaan. Contoh tulisan pemilik mengalahkan aturan gaya di skill ini. Kalau contohnya memakai pola bernomor yang dilarang (aturan Wajib, LW-25, atau LW-28), sebut polanya dan tanya sekali lewat LW-08.

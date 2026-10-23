@@ -1,21 +1,26 @@
-# WRITING.md - [nama project]
+# WRITING.md - [contoh: nama project]
 
-Arah tulisan untuk siapa pun, orang atau agent, yang menulis teks di project ini: chat, docs, README, deskripsi PR, copy situs. Baca sebelum menulis. Aturan saringannya ada di skill lazy-writing; file ini memberi arahnya. Kalau project sudah punya `DESIGN.md`, bagian-bagian di bawah boleh ditempel sebagai satu bagian "Writing" di sana.
+Arah tulisan untuk siapa pun, orang atau agent, yang menulis teks di project ini: chat, laporan, deskripsi PR, commit, README, copy situs. Baca sebelum menulis. Aturan saringannya ada di skill lazy-writing; file ini memberi arahnya.
 
-Isi setiap bagian dengan fakta project ini. Baris dalam kurung siku adalah contoh; hapus kalau tidak cocok.
+Teks dalam kurung siku adalah contoh: ganti dengan fakta project ini, atau hapus barisnya. cek-teks menandai kurung siku yang tertinggal.
+
+Kalau project sudah punya DESIGN.md, jangan buat file ini. Tambahkan satu bagian `## Writing` di DESIGN.md yang berisi tabel "Siapa yang baca" dan "Kamus project" di bawah. Copy publik tetap mengikuti bagian pembaca, Brand/Tone, dan larangan yang sudah ada di DESIGN.md; jangan salin bagian lain.
 
 ## Siapa yang baca
 
-- Pembaca utama: [contoh: pemilik project, paham bisnis freight forwarding, sedang belajar teknis]
-- Yang sudah mereka tahu: [contoh: istilah logistik (FCL, B/L, ETD); belum biasa dengan istilah Git]
-- Setelah baca, mereka harus bisa: [contoh: memutuskan merge atau tidak, tanpa membuka kode]
-- Di mana mereka baca: [contoh: chat di HP, di sela kerja]
+| Jenis teks | Pembaca | Bahasa dan register |
+|---|---|---|
+| Chat, laporan, minta keputusan | [contoh: pemilik project, paham freight forwarding, sedang belajar teknis] | [contoh: Indonesia santai, gw/lu] |
+| Deskripsi PR | [contoh: pemilik dan reviewer] | [contoh: English, lugas] |
+| Commit, komentar kode | [contoh: developer berikutnya] | [contoh: English, conventional commits] |
+| README, docs | [contoh: orang yang baru pertama membuka repo] | [contoh: English, lugas] |
+| Copy publik | [contoh: importir dan eksportir yang mencari forwarder] | [contoh: English, profesional, tanpa jargon internal] |
 
-## Suara dan register
+Yang sudah dia tahu (tidak perlu diberi arti lagi): [contoh: FCL, LCL, B/L, ETD, PIB, PR, merge]
 
-- Bahasa: [contoh: Indonesia santai untuk chat; English untuk PR dan commit di repo ini]
-- Sapaan: [contoh: gw/lu; jangan pakai "Bapak" atau "Pak"]
-- Nada: [contoh: langsung, jujur soal risiko, tanpa basa-basi]
+Setelah membaca, dia harus bisa: [contoh: memutuskan merge atau tidak tanpa membuka kode]
+
+Di mana dia membaca: [contoh: chat di HP, di sela kerja]
 
 ## Kamus project
 
@@ -23,9 +28,9 @@ Istilah resmi project ini. Fungsinya seperti token warna di DESIGN.md: satu nama
 
 | Istilah yang dipakai | Artinya di project ini | Jangan pakai |
 |---|---|---|
-| [contoh: Story] | [halaman utama `/`] | [beranda, home, landing] |
+| [contoh: Story] | [contoh: halaman utama `/`] | [contoh: beranda, home, landing] |
 
-Analogi yang sudah disepakati untuk pembaca ini: [contoh: pakai kamus-analogi lazy-writing; tambahan di bawah]
+Analogi yang sudah disepakati dan berhasil untuk pembaca ini (tambahan atau pengganti kamus-analogi lazy-writing): [contoh: mirror = portal cadangan]
 
 ## Keputusan yang wajib diberi alasan satu baris
 
@@ -36,7 +41,7 @@ Dicatat di PR atau catatan serah terima:
 - Tabel, heading, atau emoji di teks yang biasanya tanpa itu.
 - Istilah baru yang masuk kamus project.
 
-## Tidak ada di teks ini
+## Yang tidak boleh ada di teks project ini
 
 - [contoh: angka tanpa sumber dan tanggal]
 - [contoh: testimoni, logo partner, atau nama pelanggan tanpa izin tertulis]
@@ -45,7 +50,7 @@ Dicatat di PR atau catatan serah terima:
 
 ## Cek sebelum "selesai"
 
-- Gerbang Kirim lazy-writing (8 pertanyaan) dengan jawaban "tidak" semua.
-- `node <folder skill lazy-writing>/scripts/cek-teks.mjs <file>` dengan 0 GAGAL untuk file teks yang diubah.
+- Gerbang Kirim lazy-writing lolos (lihat SKILL.md).
+- Untuk file yang diubah: `git diff -U0 -- <file> | node <folder skill lazy-writing>/scripts/cek-teks.mjs --diff -` dengan 0 GAGAL.
 - [contoh: dibaca di layar HP kalau teksnya tayang di situs]
-- Laporan PASS/FAIL dengan bukti di PR atau catatan serah terima untuk teks panjang atau publik.
+- Satu baris hasil gerbang di PR atau catatan serah terima, hanya menyebut cek yang benar-benar dijalankan.
