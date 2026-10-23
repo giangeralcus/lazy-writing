@@ -8,32 +8,32 @@ Cara pakai:
 - Kolom Analogi dipakai di Mode Belajar, atau di mode lain kalau analogi memang mempercepat (LW-10).
 - Kolom Batas ikut disebut kalau analoginya dipakai, supaya pembaca tidak menarik kesimpulan yang salah.
 - Satu benda freight untuk satu konsep. Jangan pinjam analogi baris lain untuk konsep yang berbeda.
-- Dalam satu pesan, ambil analogi dari satu rangkaian saja. Tiap bagian di bawah adalah satu rangkaian: Git sampai situs live memakai alur dokumen dan portal, server memakai gudang dan pengiriman, pemeriksaan memakai inspeksi, AI memakai staf dan kantor.
+- Dalam satu pesan, ambil analogi dari satu rangkaian saja. Git sampai situs live dan server memakai satu alur freight: dokumen dulu (draft B/L, ACC, B/L final), lalu barang (pengiriman, gudang, release order). Pemeriksaan memakai inspeksi, AI memakai staf dan kantor.
 - Hal yang berbeda per repo (ada CI atau tidak, merge langsung tayang atau tidak) dicek dulu di repo itu. Kolom Batas mencatat keadaan per 23 Oktober 2026; cek ulang sebelum menyebutnya sebagai fakta.
 - Kalau pemilik terlihat bingung dengan analogi di sini, ganti dan catat analogi baru yang berhasil di WRITING.md project, lalu usulkan perubahan baris ini lewat PR.
 
-## Git sampai situs live (rangkaian dokumen dan portal)
+## Git sampai situs live (alur dokumen lalu barang)
 
 | Istilah | Arti | Analogi | Batas |
 |---|---|---|---|
 | repository (repo) | Folder project yang menyimpan semua file beserta riwayat semua perubahannya. | Job file satu shipment yang menyimpan semua dokumen dan semua revisinya. | Repo bisa disalin utuh ke banyak komputer, dan salinannya bisa disamakan lagi. |
 | commit | Satu titik simpan perubahan, lengkap dengan catatan apa yang diubah. | Revisi bernomor dengan catatan, misalnya "rev 3: ganti consignee". | Commit menyimpan keadaan seluruh project saat itu, bukan satu dokumen saja. |
 | branch | Jalur kerja terpisah untuk mengubah sesuatu tanpa mengganggu versi utama. | Draft B/L: diperiksa dan diubah bolak-balik tanpa menyentuh B/L yang sudah terbit. | Banyak branch bisa dikerjakan bersamaan oleh orang atau agent yang berbeda. |
-| main (atau master) | Branch utama yang dianggap versi resmi. | Dokumen final yang sudah di-ACC dan disimpan di arsip resmi. | Apakah main langsung tayang berbeda per repo: gpindo-com ya (Hostinger), giangeralcus.com hanya mirror Pages, situs utamanya diaktifkan terpisah. |
-| pull request (PR) | Pengajuan untuk menggabungkan perubahan dari sebuah branch ke main, tempat perubahan itu direview. | Pengajuan revisi yang menunggu ACC atasan, lengkap dengan catatan apa yang berubah dan kenapa. | Di repo yang punya CI, mesin ikut memeriksa otomatis. gpindo-com belum punya CI. |
-| merge | Menggabungkan perubahan dari branch ke main. | Revisi di-ACC dan dimasukkan ke dokumen final di arsip. | Merge bukan berarti situs berubah; itu tergantung apakah repo-nya deploy otomatis setelah merge. |
+| main (atau master) | Branch utama yang dianggap versi resmi. | B/L final yang sudah terbit dan berlaku. | Apakah main langsung tayang berbeda per repo: gpindo-com ya (Hostinger), giangeralcus.com hanya mirror Pages, situs utamanya diaktifkan terpisah. |
+| pull request (PR) | Pengajuan untuk menggabungkan perubahan dari sebuah branch ke main, tempat perubahan itu direview. | Draft B/L yang dikirim ke shipper untuk dicek dan di-ACC, lengkap dengan catatan apa yang berubah dan kenapa. | Di repo yang punya CI, mesin ikut memeriksa otomatis. gpindo-com belum punya CI. |
+| merge | Menggabungkan perubahan dari branch ke main. | Draft di-ACC, lalu B/L final terbit dengan isi itu. | Merge bukan berarti situs berubah; itu tergantung apakah repo-nya deploy otomatis setelah merge. |
 | diff | Daftar baris yang ditambah, dihapus, atau diubah. | Track changes di Word. | Diff hanya menunjukkan perubahan, bukan apakah perubahannya benar. |
 | merge conflict | Dua perubahan menyentuh baris yang sama, dan Git tidak bisa memilih sendiri. | Dua staf merevisi kolom consignee yang sama dengan isi berbeda; harus ada yang memutuskan. | Konflik tidak berarti ada yang rusak; artinya perlu keputusan manusia. |
 | push / pull | Push mengirim commit dari komputer ke GitHub; pull mengambil commit terbaru dari GitHub. | Upload dan download dokumen ke arsip bersama kantor. | Push ke main di repo yang deploy otomatis sama dengan menayangkan perubahan. |
 | clone | Membuat salinan lengkap sebuah repo di komputer lain. | Fotokopi seluruh job file, termasuk semua revisi lamanya. | Salinan itu tidak ter-update sendiri; perlu pull. |
-| review | Pemeriksaan perubahan oleh orang lain sebelum di-merge. | Pengecekan draft oleh supervisor sebelum di-ACC. | Reviewer bisa minta perubahan; PR bisa bolak-balik beberapa kali. |
+| review | Pemeriksaan perubahan oleh orang lain sebelum di-merge. | Pengecekan draft oleh shipper atau supervisor sebelum di-ACC. | Reviewer bisa minta perubahan; PR bisa bolak-balik beberapa kali. |
 | revert | Commit baru yang membatalkan satu perubahan tertentu; perubahan lain sesudahnya tetap ada. | Revisi koreksi "rev 5: batalkan rev 3"; rev 4 tetap berlaku. | Revert tercatat sebagai perubahan baru, riwayatnya tidak dihapus. |
-| deploy | Memasang versi dari main ke server supaya pengunjung melihat versi baru. | Dokumen final dipasang di portal pelanggan; sejak itu yang membuka portal melihat versi baru. | Deploy bisa otomatis setelah merge atau langkah terpisah; cek dulu repo-nya. HANDOVER gpindo-com mencatat Hostinger memasang 18 sampai 27 detik setelah push, tapi pernah melewatkan satu push (20 Oktober), jadi situs live tetap dicek. |
-| mirror dan primary origin | Primary origin adalah server utama yang melayani domain asli; mirror adalah salinan situs di alamat lain yang di-deploy terpisah. | Portal utama dan portal cadangan di alamat lain. | Di giangeralcus.com, mirror (giangeralcus-com.pages.dev) di-update otomatis setelah merge, server utama (Monchi) tidak. Mirror bisa lebih baru atau lebih lama dari situs utama. |
-| aktivasi | Langkah manual di server utama yang menjadikan rilis baru sebagai versi yang dilayani. | Tombol publish di portal utama: dokumen sudah diunggah, tapi baru tampil setelah dipublikasikan. | Di giangeralcus.com aktivasi mengikuti checkpoint terbaru di HANDOVER.md. Sebelum itu domain utama masih menampilkan versi lama. |
-| rollback | Mengaktifkan lagi rilis lama di server tanpa mengubah kode. | Menayangkan lagi versi dokumen sebelumnya di portal, sementara arsip tidak diubah. | Rollback tidak memperbaiki kode; perubahan yang salah masih ada di main sampai ada revert atau perbaikan. |
-| Cloudflare Pages dan preview | Layanan Cloudflare yang menyimpan dan menayangkan situs statis; tiap branch bisa dapat alamat preview sendiri. | Portal contoh: draft dipasang di alamat contoh untuk dicek sebelum di-ACC. | Alamat preview bisa dibuka siapa pun yang tahu alamatnya, dan bukan domain utama. |
-| GitHub Actions workflow | Tugas otomatis yang dijalankan GitHub saat ada kejadian tertentu (push, PR), misalnya Build Check atau deploy mirror. | Aturan otomatis di arsip: setiap revisi masuk, sistem langsung mengecek kelengkapan dan mengirim salinan ke portal cadangan. | Hanya jalan di repo yang punya file workflow di folder `.github/workflows`. giangeralcus.com dan gpindo-co-id punya; gpindo-com tidak. |
+| deploy | Memasang versi dari main ke server supaya pengunjung melihat versi baru. | Pengiriman barang ke consignee setelah dokumen beres; pelanggan baru bisa memakai barangnya setelah sampai. | Deploy bisa otomatis setelah merge atau langkah terpisah; cek dulu repo-nya. HANDOVER gpindo-com mencatat Hostinger memasang 18 sampai 27 detik setelah push, tapi pernah melewatkan satu push (20 Oktober), jadi situs live tetap dicek. |
+| mirror dan primary origin | Primary origin adalah server utama yang melayani domain asli; mirror adalah salinan situs di alamat lain yang di-deploy terpisah. | Gudang utama, dan gudang kedua di alamat lain yang menerima kiriman sendiri. | Di giangeralcus.com, mirror (giangeralcus-com.pages.dev) di-update otomatis setelah merge, server utama (Monchi) tidak. Mirror bisa lebih baru atau lebih lama dari situs utama. |
+| aktivasi | Langkah manual di server utama yang menjadikan rilis baru sebagai versi yang dilayani. | Release order di gudang utama: barang sudah ada di gudang, tapi baru boleh keluar setelah release order ditandatangani. | Di giangeralcus.com aktivasi mengikuti checkpoint terbaru di HANDOVER.md. Sebelum itu domain utama masih menampilkan versi lama. |
+| rollback | Mengaktifkan lagi rilis lama di server tanpa mengubah kode. | Gudang mengeluarkan lagi batch sebelumnya sementara batch baru ditahan; dokumennya tidak diubah. | Rollback tidak memperbaiki kode; perubahan yang salah masih ada di main sampai ada revert atau perbaikan. |
+| Cloudflare Pages dan preview | Layanan Cloudflare yang menyimpan dan menayangkan situs statis; tiap branch bisa dapat alamat preview sendiri. | Sample barang yang dikirim ke shipper untuk dicek sebelum draft di-ACC. | Alamat preview bisa dibuka siapa pun yang tahu alamatnya, dan bukan domain utama. |
+| GitHub Actions workflow | Tugas otomatis yang dijalankan GitHub saat ada kejadian tertentu (push, PR), misalnya Build Check atau deploy mirror. | Aturan otomatis di sistem: setiap revisi masuk, sistem langsung mengecek kelengkapan dan mengirim barang ke gudang kedua. | Hanya jalan di repo yang punya file workflow di folder `.github/workflows`. giangeralcus.com dan gpindo-co-id punya; gpindo-com tidak. |
 
 ## Pemeriksaan (rangkaian inspeksi)
 
@@ -48,7 +48,7 @@ Cara pakai:
 | regression | Fitur yang dulu bekerja jadi rusak gara-gara perubahan baru. | Perbaikan jadwal satu rute malah mengacaukan jadwal rute lain. | Tes otomatis dibuat terutama untuk menangkap ini. |
 | kontras WCAG AA | Standar keterbacaan: minimal 4,5:1 untuk teks biasa, dan 3:1 untuk teks besar (24px ke atas, atau 18,66px tebal) serta elemen non-teks seperti ikon, garis input, dan focus ring. | Marking di karton: hitam di atas kuning terbaca dari jauh, abu-abu di atas cokelat tidak. | Rasio diukur dengan alat, bukan dikira-kira dengan mata. |
 
-## Server dan jaringan (rangkaian gudang dan pengiriman)
+## Server dan jaringan (gudang dan pengiriman, lanjutan alur di atas)
 
 | Istilah | Arti | Analogi | Batas |
 |---|---|---|---|
@@ -80,7 +80,7 @@ Cara pakai:
 | model | Program AI yang membaca teks dan menghasilkan jawaban, misalnya Claude atau GPT. | Tenaga ahli yang dikontrak: beda ahli, beda keahlian dan tarif. | Model tidak ingat percakapan lain kecuali lewat file atau memory, dan pengetahuannya berhenti di tanggal tertentu; info terbaru harus dicek. |
 | token | Satuan potongan teks yang dihitung model; satu kata bisa jadi beberapa token. | Tarif penerjemah per kata: biaya dan batas kerja dihitung per potongan teks. | Jumlah token per kata berbeda antarbahasa dan antarmodel. |
 | context window | Batas jumlah token yang bisa dipegang model dalam satu percakapan. | Map job file dengan kapasitas tetap: kalau sudah penuh, berkas lama harus diringkas supaya yang baru bisa masuk. | Batasnya per percakapan, bukan per hari. |
-| compact | Meringkas percakapan panjang supaya muat lagi di context window. | Thread email panjang diganti ringkasan satu halaman di map. | Detail yang tidak ikut diringkas hilang dari sisa percakapan; yang harus bertahan ditulis ke file (HANDOVER, CLAUDE.md, memory). |
+| compact | Meringkas percakapan panjang supaya muat lagi di context window. | Thread email panjang diganti ringkasan satu halaman di map. | Email aslinya tidak disimpan di tempat lain yang bisa dibuka Claude. Detail yang tidak ikut diringkas hilang dari sisa percakapan; yang harus bertahan ditulis ke file (HANDOVER, CLAUDE.md, memory). |
 | prompt | Instruksi yang diberikan ke model. | Booking request ke pelayaran: makin lengkap dan jelas datanya, makin kecil risiko salah booking. | Prompt yang jelas tidak menjamin jawabannya benar; tetap perlu dicek. |
 | agent | AI yang tidak cuma menjawab, tapi juga menjalankan langkah: membaca file, menjalankan perintah, membuka PR. | Forwarder yang memegang surat kuasa: mengurus dokumen atas nama klien, dalam batas kuasanya. | Agent bisa salah langkah; karena itu langkah yang tidak bisa dibatalkan perlu ACC pemilik. |
 | subagent | Agent yang ditugasi agent lain untuk mengerjakan satu bagian. | Subkon trucking yang dipakai forwarder untuk satu leg perjalanan. | Hasil subagent tetap harus dicek oleh agent utama. |

@@ -10,12 +10,12 @@ Urutan:
 2. Istilah baru: istilah asli, lalu arti satu kalimat (LW-02). Maksimal sekitar tiga istilah baru (LW-23).
 3. Satu analogi dari dunia pembaca, plus batasnya (LW-10). Ambil dari [kamus-analogi.md](kamus-analogi.md) supaya konsisten, dan ambil dari satu rangkaian saja.
 4. Contoh nyata dari pekerjaan atau project pembaca (LW-11).
-5. Artinya buat dia: apa yang berubah dalam keputusan atau pekerjaannya.
-6. Berhenti di satu cek paham yang spesifik (LW-18).
+5. Akibatnya buat dia: apa yang berubah dalam keputusan atau pekerjaannya. Tulis langsung, tanpa label seperti "Artinya buat lu:".
+6. Berhenti di satu cek paham yang menyuruh dia memakai idenya di kasus baru (LW-18), bukan mengulang kalimat di atasnya. Pertanyaannya terbuka ("apa yang dilihat pengunjung, dan kenapa?"), bukan pilihan dua yang jawabannya sudah kelihatan.
 
-Kalau pertanyaannya menyentuh beberapa konsep, jawab intinya dalam satu atau dua kalimat, ajarkan konsep pertama saja, lalu cek paham. Konsep berikutnya menunggu jawaban dia.
+Kalau pertanyaannya menyentuh beberapa konsep, jawab intinya dalam satu atau dua kalimat, ajarkan konsep pertama saja, lalu cek paham. Konsep berikutnya menunggu jawaban dia. Istilah yang tidak perlu untuk menjawab pertanyaan ini tidak dimunculkan.
 
-Kalau dia terlihat bingung (jawaban cek paham meleset, bertanya ulang hal yang sama, atau bilang bingung), jangan ulang penjelasan yang sama dengan kata lebih banyak. Ganti analogi atau contohnya, atau pakai bentuk lain (daftar langkah, tabel dua kolom). Analogi baru yang berhasil dipakai terus selama percakapan itu.
+Pesan Mode Belajar muat sekitar satu layar HP. Kalau tidak muat, kemungkinan isinya lebih dari satu konsep: buang konsep kedua, jangan padatkan penjelasan konsep inti. Setiap bagian yang disebut punya tempat di analoginya (LW-10).
 
 <!-- cek-teks: off -->
 Sebelum:
@@ -29,25 +29,53 @@ Sesudah:
 
 > PR (pull request) adalah pengajuan perubahan kode yang menunggu ACC lu sebelum masuk ke versi resmi situs.
 >
-> Analoginya: pengajuan revisi yang menunggu ACC atasan, lengkap dengan catatan apa yang berubah dan kenapa. Tombol ACC-nya di GitHub namanya Merge: begitu diklik, revisinya masuk ke versi resmi. Bedanya dengan kantor: di sebagian repo, ACC ini langsung mengubah situs live.
+> Analoginya: draft B/L yang dikirim ke shipper untuk dicek. Tombol ACC-nya di GitHub namanya Merge: begitu diklik, isinya jadi versi resmi, seperti B/L final yang terbit. Bedanya: di sebagian repo, ACC ini langsung membuat situs live berubah.
 >
-> Contoh nyata: PR #26 di gpindo-com menghapus angka 10+/20+/40+/100+ yang tidak punya sumber. Di repo itu, merge langsung memicu deploy, yaitu pemasangan versi baru ke Hostinger.
+> Contoh nyata: PR #26 di gpindo-com menghapus angka 10+/20+/40+/100+ yang tidak punya sumber. Di repo itu, merge langsung memicu deploy (pemasangan versi baru ke Hostinger), seperti pengiriman yang otomatis jalan begitu dokumennya di-ACC.
 >
-> Artinya buat lu: selama PR #26 belum di-merge, gpindo.com tidak berubah.
+> Jadi selama PR #26 belum di-merge, gpindo.com tidak berubah.
 >
-> Cek paham: kalau PR #26 ditutup tanpa merge, gpindo.com masih menampilkan angka 10+ atau tidak?
+> Cek paham: kalau PR #26 ditutup tanpa merge, apa yang dilihat pengunjung gpindo.com besok, dan kenapa?
 
-Istilah barunya tiga (PR, merge, deploy), analoginya satu rangkaian (pengajuan dan ACC), dan pesannya berhenti di satu pertanyaan yang jawabannya bisa dicek.
+Istilah barunya tiga (PR, merge, deploy), analoginya satu alur freight (draft dokumen, ACC, lalu pengiriman), dan pesannya berhenti di satu pertanyaan yang menyuruh dia memakai idenya.
+
+### Kalau dia masih bingung
+
+Jawab tebakannya dulu dengan jelas: bagian mana yang benar, bagian mana yang meleset. Lalu pilih satu. Kalau gambaran dia cocok sebagian, pakai gambaran itu dan betulkan bagian yang salah. Kalau gambaran itu yang bikin salah paham, sebut kenapa gambaran itu menyesatkan, lalu ganti dengan satu gambaran lain dari pekerjaannya (profilnya memintanya begitu). Jangan membenarkan gambarannya lalu diam-diam menggantinya. Jelaskan mekanismenya langkah demi langkah, tulis aksi yang bisa dia lakukan kalau ada, dan jangan tambah istilah baru. Batas panjangnya satu layar HP, tapi jangan dipadatkan jadi kalimat pendek yang harus ditebak artinya.
+
+<!-- cek-teks: off -->
+Gambaran dia cocok sebagian. Dia membalas: "oh jadi merge itu kayak kapal udah berangkat ya?"
+
+Sebelum (tebakannya tidak dijawab, lalu tiga gambaran baru sekaligus):
+
+> Bukan begitu. Coba kita pakai gambaran lain. Merge itu seperti arsip yang disimpan di lemari, sementara deploy itu seperti brosur yang dicetak ulang dan dibagikan, lalu ada juga mirror yang seperti fotokopi brosur di cabang lain...
+<!-- cek-teks: on -->
+
+Sesudah:
+
+> Hampir. Kapal berangkat itu lebih mirip deploy: barangnya benar-benar jalan ke pelanggan. Merge baru dokumennya yang final. Di gpindo-com dua-duanya terjadi bersamaan, makanya kerasa sama.
+>
+> Cek paham: kalau PR sudah di-merge tapi deploy-nya belum jalan, apa yang dilihat pengunjung situs, dan kenapa?
+
+Gambaran dia yang bikin salah paham. Dia membalas: "jadi revert itu kayak ngehapus revisi yang salah dari arsip ya?"
+
+Sesudah (gambaran "hapus dari arsip" diganti, karena justru itu yang keliru):
+
+> Nggak dihapus. Gambaran "hapus dari arsip" bikin kesannya revisi yang salah hilang tanpa jejak, padahal yang terjadi kebalikannya: revert bikin revisi baru yang isinya membatalkan revisi yang salah.
+>
+> Bayangin dokumen rev 3 salah. Lu nggak sobek rev 3 dari map, tapi terbitin rev 5 yang isinya "batalkan rev 3". Isi dokumennya balik seperti sebelum rev 3, tapi rev 3 tetap ada di map. Jadi kalau ada yang nanya kenapa dulu sempat diubah, jejaknya masih bisa dicari.
+>
+> Cek paham: setelah revert, kalau ada yang nanya kenapa nomor HP lama sempat dipasang di situs, di mana lu cari jawabannya?
 
 ## 2. Laporan hasil kerja
 
 Urutan:
 
-1. Hasil dalam satu kalimat: selesai, belum, atau gagal, dan di mana posisinya sekarang (LW-01).
-2. Artinya buat pembaca: apa yang berubah buat dia atau pelanggannya.
-3. Yang perlu dia lakukan, dengan aksi, apa yang dilihat dulu, dan akibatnya (LW-06). Kalau tidak ada, tulis "tidak ada".
-4. Bukti: apa yang dicek dan hasilnya, dengan angka pembanding (LW-04, LW-26).
-5. Yang belum dicek atau masih dugaan, dipisah jelas (LW-04).
+1. Hasil dalam satu atau dua kalimat: selesai, belum, atau gagal, di mana posisinya sekarang, dan apa yang berubah buat dia atau pelanggannya (LW-01).
+2. Kalau tugasnya mengubah sesuatu: yang berubah dan yang sengaja tidak diubah, satu baris masing-masing.
+3. Yang perlu dia lakukan: aksi, apa yang dilihat dulu, dan akibatnya (LW-06). Kalau tidak ada, tulis "tidak ada".
+4. Bukti: apa yang dicek dan hasilnya, dengan angka pembanding (LW-04, LW-26). Lebih dari dua cek, satu cek satu baris, dan bukti jadi bagian sendiri, bukan sub-bullet di bawah bullet lain.
+5. Yang belum dicek atau masih dugaan, dipisah jelas (LW-04). Akibat yang belum dilihat sendiri ditulis "seharusnya", dan temuan dari membaca kode disebut "dari kodenya". Satu peringatan cukup ditulis sekali.
 6. Temuan di luar tugas, kalau ada, satu baris masing-masing.
 
 Jargon diganti akibatnya, dan detail teknis cukup di bagian bukti (LW-23).
@@ -62,12 +90,22 @@ Masalahnya: tidak menyebut apa yang berubah, "semua pengujian lulus" tanpa bukti
 
 Sesudah:
 
-> PR #26 menghapus angka 10+/20+/40+/100+ dari kode gpindo-com. Situs live gpindo.com masih menampilkannya sampai PR itu di-merge.
+> PR #26 di gpindo-com sudah gw buka dan belum di-merge, jadi situs live gpindo.com belum ikut berubah.
 >
-> - Yang perlu lu lakukan: buka PR #26, lihat daftar perubahannya di tab Files changed, lalu klik Merge kalau setuju. Hostinger memasang versi baru setelah merge, dan gw cek situs live sesudahnya.
-> - Bukti: build berhasil; file JavaScript utama 402,5 kB, turun 1,9 kB, jadi halaman sedikit lebih ringan. Dicek di lebar layar 1440 px dan 390 px (ukuran HP): 0 error di console (catatan error di browser yang tidak dilihat pengunjung), halaman tidak bisa digeser ke samping, dan semua tombol bisa dijangkau pakai keyboard.
-> - Belum dicek: tampilan di situs live, karena baru bisa dicek setelah merge.
-> - Temuan lain, tidak diubah di sini: logo di navbar mengarah ke `#` dan tidak membuka apa-apa. Kalau mau dibetulkan, itu PR terpisah.
+> - **Yang dihapus:** angka 10+/20+/40+/100+ beserta labelnya, dan grid angka beranimasinya.
+> - **Yang tetap ada:** baris kredensial dan kalimat penutup bagian itu.
+> - **Yang perlu lu lakukan:** buka PR #26, lihat tab Files changed (daftar perubahan), lalu klik Merge kalau setuju. **Merge langsung memicu pemasangan versi baru ke Hostinger.** Kabarin gw sesudahnya, nanti gw cek situs live-nya.
+>
+> Bukti, dicek di preview (versi uji):
+>
+> - Build (proses menyusun kode jadi file siap pasang) berhasil. File JavaScript utama 402,54 kB, turun 1,91 kB dari 404,45 kB.
+> - Di lebar layar 1440 px dan 390 px (ukuran HP), halaman tidak bisa digeser ke samping.
+> - Semua tombol dan link bisa dijangkau pakai keyboard.
+> - 0 error di console (catatan error dari kode halaman; kalau ada, biasanya tanda ada bagian yang rusak).
+>
+> Belum dicek: situs live, karena baru bisa dicek setelah merge.
+>
+> Temuan lain, tidak diubah di sini: dari kodenya, logo di navbar (menu atas) tidak membuka apa-apa saat diklik, karena link-nya cuma `href="#"`. Kalau mau dibetulkan, itu PR terpisah.
 
 ## 3. Minta keputusan
 
@@ -107,7 +145,7 @@ Ikut bahasa repo; gpindo-com, gpindo-co-id, dan giangeralcus.com memakai bahasa 
 <!-- cek-teks: off -->
 ```
 ## What changed
-Removes the unsourced 10+/20+/40+/100+ counters from the Stats section.
+Removes the unsourced 10+/20+/40+/100+ counters from the Stats section. Merging deploys this to gpindo.com through Hostinger.
 
 ## Why
 Owner rule (22 Oct 2026): no statistic without a named source and date.
@@ -122,16 +160,15 @@ Owner rule (22 Oct 2026): no statistic without a named source and date.
 
 ## After merge
 Hostinger deploys `main` automatically. Check gpindo.com afterwards: auto-deploy skipped one push on 20 Oct.
-
-Delivery Gate (lazy-writing): pass; cek-teks not run.
 ```
 <!-- cek-teks: on -->
 
 Aturan contoh ini:
 
+- Kalau merge langsung tayang, kalimat pertama sudah menyebutnya, karena itu risiko terbesar buat yang menekan Merge.
 - Bukti hanya berisi perintah yang benar-benar dijalankan, dengan angka dari hasilnya. Path file, cakupan tes, atau alasan yang tidak ada di sumber tidak ditambahkan.
-- Baris gerbang di akhir hanya satu, dan hanya menyebut cek yang benar-benar dijalankan. Tidak ada rubrik LULUS per aturan.
-- Arti istilah jangan dijejalkan ke sel tabel; taruh sebagai kalimat pendek.
+- Tidak ada baris Gerbang Kirim, rubrik LULUS per aturan, atau nomor aturan di deskripsi PR. Reviewer membacanya sebagai penilaian diri.
+- Arti istilah ditulis singkat di tempat istilah itu muncul, bukan di blok "Terms used" terpisah atau dijejalkan ke sel tabel.
 
 ## 6. Commit message
 

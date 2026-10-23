@@ -93,6 +93,7 @@ Setiap pola: ciri, kenapa terbaca AI, contoh sebelum dan sesudah. Yang dicari se
 ### Pengumuman (signposting)
 
 - Ciri: "Mari kita bahas", "Berikut yang perlu lu tahu", "Ada tiga istilah di baliknya:", "Let's dive in", "Artikel ini akan membahas".
+- Juga: label sebelum kalimat yang sudah jelas sendiri ("Artinya buat lu:", "Intinya:"), dan komentar tentang penjelasan sendiri ("jadi kita ganti gambaran", "biar gampang, gw jelasin pelan-pelan").
 - Sesudah: langsung bahas. Pembuka adalah jawabannya (LW-01).
 
 ### Nada otoritas palsu

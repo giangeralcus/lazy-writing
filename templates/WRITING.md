@@ -30,7 +30,7 @@ Istilah resmi project ini. Fungsinya seperti token warna di DESIGN.md: satu nama
 |---|---|---|
 | [contoh: Story] | [contoh: halaman utama `/`] | [contoh: beranda, home, landing] |
 
-Analogi yang sudah disepakati dan berhasil untuk pembaca ini (tambahan atau pengganti kamus-analogi lazy-writing): [contoh: mirror = portal cadangan]
+Analogi yang sudah disepakati dan berhasil untuk pembaca ini (tambahan atau pengganti kamus-analogi lazy-writing): [contoh: mirror = gudang kedua]
 
 ## Keputusan yang wajib diberi alasan satu baris
 
@@ -50,7 +50,7 @@ Dicatat di PR atau catatan serah terima:
 
 ## Cek sebelum "selesai"
 
-- Gerbang Kirim lazy-writing lolos (lihat SKILL.md).
+- Gerbang Kirim lazy-writing lolos (lihat SKILL.md). Hasilnya tidak dicetak di teks yang dikirim.
 - Untuk file yang diubah: `git diff -U0 -- <file> | node <folder skill lazy-writing>/scripts/cek-teks.mjs --diff -` dengan 0 GAGAL.
 - [contoh: dibaca di layar HP kalau teksnya tayang di situs]
-- Satu baris hasil gerbang di PR atau catatan serah terima, hanya menyebut cek yang benar-benar dijalankan.
+- Cek mekanis yang benar-benar dijalankan ditulis di bagian bukti PR sebagai perintah dan hasilnya.
